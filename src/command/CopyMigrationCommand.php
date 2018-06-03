@@ -1,6 +1,6 @@
 <?php
 
-namespace Samark\Carts\Command;
+namespace Samark\Cart\Command;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;

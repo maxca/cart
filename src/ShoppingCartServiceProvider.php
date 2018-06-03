@@ -1,10 +1,18 @@
 <?php
-namespace Samark;
+namespace Samark\Cart;
 
 use Illuminate\Support\ServiceProvider;
+use Samark\Cart\Command\CopyMigrationCommand;
 
 class ShippingCartServiceProvider extends ServiceProvider
 {
+    /**
+     * set command list
+     * @var array
+     */
+    protected $commands = [
+        CopyMigrationCommand::class,
+    ];
 
     /**
      * register servicde
@@ -27,7 +35,10 @@ class ShippingCartServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../database');
+        # $this->loadMigrationsFrom(__DIR__ . '/../database');
+
+        # add command
+        $this->commands($this->commands);
     }
 
     /**

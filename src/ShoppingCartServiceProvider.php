@@ -1,5 +1,7 @@
 <?php
-namespace Samark\Cart;
+namespace Samark;
+
+use Illuminate\Support\ServiceProvider;
 
 class ShippingCartServiceProvider extends ServiceProvider
 {
